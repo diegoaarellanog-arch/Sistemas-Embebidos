@@ -1,10 +1,18 @@
-uint8_t a, b, c, d, e, f, g, h, i;
-a = 0b01011100; //0x5C
-b = 0b10111010; //0xBA
-c = a & b; //0b00011000 = 0x18
-d = a | b; //0b11111110 = 0xFE
-e = ~a; //0b10100011 = 0xA3
-f = ~b; //0b01000101 = 0x45
-g = a ^ b; //0b11100110 = 0xE6
-h = a << 3; //0b11100000 = 0xE0
-i = b >> 2; //0b00101110 = 0x2E
+#include <stdio.h>
+#include <stdlib.h>
+#include <cstdint> // Necesario para uint8_t
+
+int main(){
+    uint8_t a, b, c, d, e, f, g, h, i;
+    a = 0b01011100; //0x5C
+    b = 0b10111010; //0xBA
+    c = a & b; //0b00011000 = 0x18
+    d = a | b; //0b11111110 = 0xFE
+    e = ~a; //0b10100011 = 0xA3
+    f = ~b; //0b01000101 = 0x45
+    g = a ^ b; //0b11100110 = 0xE6
+    h = a << 3; //0b11100000 = 0xE0
+    i = b >> 2; //0b00101110 = 0x2E
+    system("pause");
+    return 0;
+}
