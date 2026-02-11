@@ -21,5 +21,14 @@ L3 = rtb.RevoluteDH(d = 0, a = l3, alpha = 0); # Nota: qlim delimita el rango de
 bot = rtb.SerialLink([L1, L2, L3]);
 
 # ---------------------------------------- Visualización del robot ----------------------------------------
-ejes = [-20, 20, -20, 20, 0, 25];
-bot.plot([0, 0, 0], 'workspace', ejes, 'noname');
+#bot.teach([0, 0, 0], limits = [-1, 1, -1, 1, 0, 1]) # Mostrar la configuración del robot
+# 'teach=False' evita que se creen los sliders que dan el error
+ejes = [-30, 30, -30, 30, 0, 30]
+
+bot.plot([0, 0, 0], limits = ejes, block = True)
+
+# Título para confirmar la rotación
+print("Visualizando robot... El eslabón 2 tiene un offset de 90° (pi/2)")
+
+# Mantener la ventana abierta
+plt.show()
