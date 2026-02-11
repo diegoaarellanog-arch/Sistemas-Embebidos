@@ -1,5 +1,8 @@
 from roboticstoolbox import *
 import math
+from roboticstoolbox.backends.PyPlot import PyPlot
+
+# ... (donde defines tu robot) ...
 
 l1 = 12
 l2 = 14
@@ -17,6 +20,11 @@ Robot = DHRobot(R, name='Bender')
 print(Robot)
 
 Robot.teach([q1, q2], limits=[-30,30,-30,30,-30,30])
+# En lugar de Robot.teach(...), usa esto:
+#env = PyPlot()
+#env.launch()          # Lanza la ventana
+#env.add(Robot)        # Añade tu robot al entorno
+#env.hold()            # Mantiene la ventana abierta
 
 #zlim([-15,30]);
 
