@@ -1,0 +1,98 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1455 ]
+[d frameptr 6 ]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"63 C:\Users\tato2\Documents\Universidad\Sistemas-Embebidos\Corte-I\Leds8x8\Matriz.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+"221
+[v _MAX7219_send MAX7219_send `(v  1 e 1 0 ]
+"245
+[v _MAX7219_update MAX7219_update `(v  1 e 1 0 ]
+"5906 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC12-16F1xxx_DFP/1.8.254/xc8\pic\include\proc/pic16f1455.h
+[v _ANSC2 ANSC2 `VEb  1 e 0 @3186 ]
+"5909
+[v _ANSC3 ANSC3 `VEb  1 e 0 @3187 ]
+"6626
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"6635
+[v _RC2 RC2 `VEb  1 e 0 @114 ]
+"6638
+[v _RC3 RC3 `VEb  1 e 0 @115 ]
+"6641
+[v _RC4 RC4 `VEb  1 e 0 @116 ]
+"6644
+[v _RC5 RC5 `VEb  1 e 0 @117 ]
+"6908
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1125 ]
+"6917
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1138 ]
+"6920
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
+"6923
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"6926
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"7040
+[v _WPUA5 WPUA5 `VEb  1 e 0 @4197 ]
+"7082
+[v _nWPUEN nWPUEN `VEb  1 e 0 @1199 ]
+"49 C:\Users\tato2\Documents\Universidad\Sistemas-Embebidos\Corte-I\Leds8x8\Matriz.X\newmain.c
+[v _brt brt `uc  1 e 1 0 ]
+"63
+[v _main main `(v  1 e 1 0 ]
+{
+"188
+[v main@j j `i  1 a 2 10 ]
+"183
+[v main@i i `i  1 a 2 14 ]
+"145
+[v main@corrimiento corrimiento `i  1 a 2 12 ]
+[v main@pos pos `i  1 a 2 7 ]
+[v main@duracion duracion `i  1 a 2 4 ]
+[v main@desplazamiento desplazamiento `i  1 a 2 2 ]
+[v main@n_columnas n_columnas `i  1 a 2 0 ]
+"144
+[v main@idx idx `uc  1 a 1 9 ]
+"143
+[v main@registro registro `uc  1 a 1 6 ]
+"65
+[v main@imagen_8x32 imagen_8x32 `DC[56]uc  1 s 56 imagen_8x32 ]
+"217
+} 0
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"245 C:\Users\tato2\Documents\Universidad\Sistemas-Embebidos\Corte-I\Leds8x8\Matriz.X\newmain.c
+[v _MAX7219_update MAX7219_update `(v  1 e 1 0 ]
+{
+"250
+} 0
+"221
+[v _MAX7219_send MAX7219_send `(v  1 e 1 0 ]
+{
+[v MAX7219_send@a a `uc  1 p 1 wreg ]
+"231
+[v MAX7219_send@i_66 i `i  1 a 2 5 ]
+"224
+[v MAX7219_send@i i `i  1 a 2 3 ]
+"221
+[v MAX7219_send@a a `uc  1 p 1 wreg ]
+[v MAX7219_send@d d `uc  1 p 1 0 ]
+"224
+[v MAX7219_send@a a `uc  1 p 1 2 ]
+"241
+} 1

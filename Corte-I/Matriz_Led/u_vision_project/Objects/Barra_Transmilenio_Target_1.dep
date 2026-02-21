@@ -1,0 +1,32 @@
+Dependencies for Project 'Barra_Transmilenio', Target 'Target_1': (DO NOT MODIFY !)
+CompilerVersion: 6240000::V6.24::ARMCLANG
+F (.\Barra_Transmilenio.cpp)(0x6998F046)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="543" -DSTM32F767xx -D_RTE_-o ./objects/barra_transmilenio.o -MMD)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x6994D326)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x6994D326)
+I (C:\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm7.h)(0x6994CE0B)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x6994D326)
+I (config.h)(0x6998F02C)
+F (.\MAX7219.h)(0x6997894E)()
+F (.\config.h)(0x6998F02C)()
+F (.\MAX7219.cpp)(0x6997D2E1)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="543" -DSTM32F767xx -D_RTE_-o ./objects/max7219.o -MMD)
+I (MAX7219.h)(0x6997894E)
+I (config.h)(0x6998F02C)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x6994D326)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x6994D326)
+I (C:\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm7.h)(0x6994CE0B)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x6994D326)
+F (.\main_init.h)(0x6997A414)()
+F (.\main_init.cpp)(0x6997D9F8)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="543" -DSTM32F767xx -D_RTE_-o ./objects/main_init.o -MMD)
+I (main_init.h)(0x6997A414)
+I (config.h)(0x6998F02C)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x6994D326)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x6994D326)
+I (C:\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm7.h)(0x6994CE0B)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x6994D326)
+I (MAX7219.h)(0x6997894E)
+F (RTE/Device/STM32F767ZITx/startup_stm32f767xx.s)(0x6994D326)(--target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 543" -Wa,armasm,--pd,"STM32F767xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f767xx.o)
+F (RTE/Device/STM32F767ZITx/system_stm32f7xx.c)(0x6994D326)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-IC:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="543" -DSTM32F767xx -D_RTE_-o ./objects/system_stm32f7xx.o -MMD)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x6994D326)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x6994D326)
+I (C:\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm7.h)(0x6994CE0B)
+I (C:\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x6994D326)

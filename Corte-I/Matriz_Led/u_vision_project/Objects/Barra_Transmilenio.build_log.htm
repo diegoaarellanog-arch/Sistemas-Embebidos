@@ -1,0 +1,129 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.43.1.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Diego Arellano, Universidad Ecci, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.43.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.24
+Assembler:       Armasm.exe V6.24
+Linker/Locator:  ArmLink.exe V6.24
+Library Manager: ArmAr.exe V6.24
+Hex Converter:   FromElf.exe V6.24
+CPU DLL:         SARMCM3.DLL V5.43.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.1.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+C:\Users\tato2\Documents\Universidad\Sistemas-Embebidos\Corte-I\Matriz_Led\u_vision_project\Barra_Transmilenio.uvprojx
+Project File Date:  02/19/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target_1'
+compiling system_stm32f7xx.c...
+MAX7219.cpp(5): error: no matching function for call to 'SetOutPin'
+    5 |                 SetOutPin(PORT_CS, CS, (a >> i) & 1);                   // Enviamos byte de direccion, MSB hacia LSB
+      |                 ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(6): error: no matching function for call to 'SetOutPin'
+    6 |                 SetOutPin(PORT_CLK, CLK, 1);                                                    // Pulso de reloj
+      |                 ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(7): error: no matching function for call to 'SetOutPin'
+    7 |                 SetOutPin(PORT_CLK, CLK, 0);
+      |                 ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(11): error: no matching function for call to 'SetOutPin'
+   11 |                 SetOutPin(PORT_DATA, DATA, (d >> i) & 1);       // Enviamos byte de datos, MSB hacia LSB
+      |                 ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(12): error: no matching function for call to 'SetOutPin'
+   12 |     SetOutPin(PORT_CLK, CLK, 1);                                                        // Pulso de reloj
+      |     ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(13): error: no matching function for call to 'SetOutPin'
+   13 |                 SetOutPin(PORT_CLK, CLK, 0);
+      |                 ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(16): error: no matching function for call to 'SetOutPin'
+   16 |         SetOutPin(PORT_DATA, DATA, 0);                                                  // Limpiamos el pin asignado a DATA
+      |         ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(20): error: no matching function for call to 'SetOutPin'
+   20 |         SetOutPin(PORT_CS, CS, 1);                                                                      // Pulso para imprimir en el/los display/s
+      |         ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+MAX7219.cpp(21): error: no matching function for call to 'SetOutPin'
+   21 |         SetOutPin(PORT_CS, CS, 0);
+      |         ^~~~~~~~~
+.\config.h(32): note: candidate function not viable: requires 2 arguments, but 3 were provided
+   32 | inline void SetOutPin(uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
+      |             ^         ~~~~~~~~~~~~~~~~~~~~~~~~
+9 errors generated.
+compiling MAX7219.cpp...
+Barra_Transmilenio.cpp(14): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+   14 |         for (int t=0;t<time;t++);
+      |                      ~^~~~~
+1 warning generated.
+compiling Barra_Transmilenio.cpp...
+compiling main_init.cpp...
+assembling startup_stm32f767xx.s...
+".\Objects\Barra_Transmilenio.axf" - 9 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.3.0.pack
+                ARM::CMSIS@6.3.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.16.0.pack
+                Keil::STM32F7xx_DFP@2.16.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include
+  C:/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.2.0
+
+   * Component: Keil::Device:Startup@1.2.5
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f767xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
