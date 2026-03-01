@@ -5,38 +5,62 @@
 
 #include <stdio.h>
 #include "stm32f7xx.h"
+#include "config.h"
 #include "init.h"
+#include "LCD.h"
 #include "Matrix8x8.h"
 
+uint8_t bufferMensaje[200] = {0};			// El texto completo 
+uint8_t bufferPantalla[24] = {0};     // Lo que se ve impreso
+int longitudMensaje = 0;              // Cuántas columnas ocupa la frase
+int b = 0;
+
+extern "C"{
+	void EXTI15_10_IRQHandler(void){
+		EXTI->PR |= (1<<13); //Down flag
+		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
+			if (b == 1){
+				prepararMensaje("Aguas y Universidades");
+				b = 0;
+			}
+			else {
+				prepararMensaje("Marly y Calle 45");
+				b = 1;
+			}
+		}
+	}
+}
 
 int main(){
-	Init(); 									// Configuracion de puertos GPIOs
-
-	unsigned char txt = 'i'; 	// Texto a imprimir
-	int posicion = 0; 				// Posicion del texto a imprimier 
-	int	repeticion = 0; 			// # Repetiociones por impresion, 
 	
-	while(1){
-		for(int i = 0; i < Fuente4x8[txt].ancho; i++){
-			M_FIL(Fuente4x8[txt].datos[i]);
-			M2_COL((0b01 << i) << posicion);
-			M3_COL(((0b01 << i) << posicion) >> 8);
-			Delay(50);
-			M_FIL(0); M3_COL(0);
-		}
-		
-		if(repeticion >10000) { // modifica la velocidad de desplazamiento del texto
-			repeticion = 0;
+	Init(); // GPIOs
+  LCD_Init_GPIO();
+    LCD_Arrancar();
 
-			if (posicion < BUFFER)
-				posicion ++;
-			else
-				posicion = 0;
-		}
-		else {
-			repeticion++;
-		}
+    // Intentar imprimir una 'A' (Binario: 0100 0001)
+    GPIOG->BSRR = (1 << 2); // RS = 1
+    LCD_Enviar_Nibble(0x04); // Nibble alto (0100)
+    LCD_Enviar_Nibble(0x01); // Nibble bajo  (0001)
+	
+	prepararMensaje("Proximas paradas: Aguas y Universidades");
+	int miOffset = -24; // Empezamos desde fuera de la pantalla (derecha)
+	
+	while (1) {
+		// 1. Actualizar qué parte del mensaje se ve
+    actualizarScroll(miOffset);
 		
-		
-	}
+		// 2. Refrescar la pantalla muchas veces para que el ojo lo vea
+		// Entre más veces lo hagas, más lento se moverá el texto
+		for(int velocidad = 0; velocidad < 150; velocidad++) {
+			refrescarPantalla(); // La función que te pasé antes
+		}
+
+		// 3. Mover el texto a la izquierda
+		miOffset++;
+        
+    // 4. Reiniciar si el mensaje ya pasó todo
+		if (miOffset > longitudMensaje) {
+			miOffset = -24;
+		}
+    }
 }

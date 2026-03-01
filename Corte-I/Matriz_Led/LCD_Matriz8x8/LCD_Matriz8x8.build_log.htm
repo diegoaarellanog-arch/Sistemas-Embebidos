@@ -22,24 +22,43 @@ Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
 C:\Users\tato2\Documents\Universidad\Sistemas-Embebidos\Corte-I\Matriz_Led\LCD_Matriz8x8\LCD_Matriz8x8.uvprojx
-Project File Date:  02/23/2026
+Project File Date:  02/27/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target_1'
-compiling init.cpp...
+assembling startup_stm32f767xx.s...
 compiling system_stm32f7xx.c...
-LCD_Matriz8x8.cpp(9): warning: In file included from...
-.\Matrix8x8.h(29): warning: array designators are a C99 extension [-Wc99-designator]
-   29 |         ['A'] = {5, {0x3e, 0x3f, 0x09, 0x09, 0x3e}},
+LCD_Matriz8x8.cpp(8): warning: In file included from...
+.\config.h(28): warning: array designators are a C99 extension [-Wc99-designator]
+   28 |         ['A'] = {5, {0x3e, 0x3f, 0x09, 0x09, 0x3e}},
       |         ^~~~~
 1 warning generated.
 compiling LCD_Matriz8x8.cpp...
-assembling startup_stm32f767xx.s...
+LCD.cpp(2): warning: In file included from...
+.\config.h(28): warning: array designators are a C99 extension [-Wc99-designator]
+   28 |         ['A'] = {5, {0x3e, 0x3f, 0x09, 0x09, 0x3e}},
+      |         ^~~~~
+1 warning generated.
+compiling LCD.cpp...
+init.cpp(12): warning: unused variable 'ciclos' [-Wunused-variable]
+   12 |     uint32_t ciclos = ms * 100000; 
+      |              ^~~~~~
+init.cpp(13): warning: comparison of integers of different signs: 'volatile int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+   13 |     for(volatile int i = 0; i < ms; i++); // Un mini delay manual sin usar tu funci<F3>n ms
+      |                             ~ ^ ~~
+2 warnings generated.
+compiling init.cpp...
+Matrix8x8.cpp(3): warning: In file included from...
+.\config.h(28): warning: array designators are a C99 extension [-Wc99-designator]
+   28 |         ['A'] = {5, {0x3e, 0x3f, 0x09, 0x09, 0x3e}},
+      |         ^~~~~
+1 warning generated.
+compiling Matrix8x8.cpp...
 linking...
-Program Size: Code=2440 RO-data=1384 RW-data=0 ZI-data=1632  
+Program Size: Code=3980 RO-data=1440 RW-data=0 ZI-data=1864  
 FromELF: creating hex file...
-".\LCD_Matriz8x8.axf" - 0 Error(s), 1 Warning(s).
+".\LCD_Matriz8x8.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -70,12 +89,12 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.2.0
 
    * Component: Keil::Device:Startup@1.2.5
-      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OPT.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
-      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f767xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

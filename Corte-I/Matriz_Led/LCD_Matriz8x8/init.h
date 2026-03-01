@@ -7,6 +7,7 @@
 //-- Funciones prototipo
 void Init (void);
 void Delay (uint32_t time);
+void Delay_LCD(uint32_t ms);
 
 //-- Funciones inline
 inline void SetOutPin(GPIO_TypeDef* GPIOx, uint16_t pin, bool state) { //SetOutPin(PORT, DATA, 1 o 0);
