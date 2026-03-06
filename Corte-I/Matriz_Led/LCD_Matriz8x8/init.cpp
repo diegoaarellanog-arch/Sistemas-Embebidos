@@ -1,16 +1,10 @@
 #include "init.h"
 
-void Delay(uint32_t ms) {
-    // 216000 es aprox 1ms si el reloj es 216MHz
-    // Ajusta este valor según tu velocidad real
-    uint32_t ciclos = ms * 54000; 
-    for (volatile uint32_t i = 0; i < ciclos; i++);
-}
+void Delay (uint32_t time)
+{
+	//while (time--);  
+	for (int t = 0; t < time; t++);
 
-void Delay_LCD(uint32_t ms) {
-    // Multiplicamos por un valor mucho más alto para asegurar que la LCD respire
-    uint32_t ciclos = ms * 100000; 
-    for(volatile int i = 0; i < ms; i++); // Un mini delay manual sin usar tu función ms
 }
 
 void Init (void) {

@@ -4,14 +4,31 @@
 #include <stdio.h>
 #include "stm32f7xx.h"
 
-#define EPORT GPIOD
-#define EPIN 4
-#define RSPORT GPIOG
-#define RSPIN 2
-#define RWPORT GPIOE
-#define RWPIN 2
+#define EP GPIOD
+#define E 4
+#define RSP GPIOG
+#define RS 2
 
-#define DELAY 1
+#define D4P GPIOE
+#define D5P GPIOF 
+#define D6P GPIOF
+#define D7P GPIOF
+#define D4 3
+#define D5 2
+#define D6 1
+#define D7 0
+
+#define CD 0x01
+#define RH 0x02
+#define EMS 0x06
+#define DC 0x0F
+#define DSr 0x1C
+#define DSl 0x18
+#define FS 0x28
+#define RAW1 0x80 //0b1000 0000
+#define RAW2 0xC0 //0b1100 0000
+
+#define DELAY 400
 
 #define MAX_MSG 128
 extern uint8_t bufferMensaje[200];			// El texto completo 

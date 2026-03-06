@@ -5,12 +5,13 @@
 #include "init.h"
 #include "stm32f7xx.h"
 
-void LCD_Init_GPIO(void);
-void LCD_Enviar_Nibble(uint8_t nibble);
-void LCD_Comando(uint8_t cmd);
-void LCD_Arrancar(void);
-void LCD_Escribir_Caracter(char c);
-void LCD_Imprimir(const char* mensaje);
+void SettingsLCD(unsigned char word);
+void LCDdata(unsigned char data);
+void WriteLCD(unsigned char word);
+void DisplayShiftRight(void);
+void DisplayShiftLeft(void);
+void LCD_Init(void);
+void PrintDataLCD(const char* string);
 	
 #define MAP_BITS_L(val, p0, b0, p1, b1, p2, b2, p3, b3) do { \
 	(val & 0x01) ? (p0->BSRR = (1 << b0)) : (p0->BSRR = (1 << (b0 + 16))); \

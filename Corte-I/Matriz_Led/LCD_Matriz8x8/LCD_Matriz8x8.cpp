@@ -34,13 +34,10 @@ extern "C"{
 int main(){
 	
 	Init(); // GPIOs
-  LCD_Init_GPIO();
-    LCD_Arrancar();
-
-    // Intentar imprimir una 'A' (Binario: 0100 0001)
-    GPIOG->BSRR = (1 << 2); // RS = 1
-    LCD_Enviar_Nibble(0x04); // Nibble alto (0100)
-    LCD_Enviar_Nibble(0x01); // Nibble bajo  (0001)
+  LCD_Init();
+	PrintDataLCD("Aguas y Universidades");
+  DisplayShiftRight();
+  DisplayShiftLeft();
 	
 	prepararMensaje("Proximas paradas: Aguas y Universidades");
 	int miOffset = -24; // Empezamos desde fuera de la pantalla (derecha)
