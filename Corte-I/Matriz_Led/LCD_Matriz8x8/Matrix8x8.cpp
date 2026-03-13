@@ -54,6 +54,6 @@ void refrescarPantalla(void) {
         // 3. Encender la fila actual (Lógica inversa si usas ULN2803)
         M_FIL(1 << fila); 
 
-        for (int t = 0; t < 100;t++);
+        for (int t = 0; t < 400;t++);
     }
 }

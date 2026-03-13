@@ -52,6 +52,11 @@ void Init (void) {
 	GPIOG->ODR = 0x0;														// 0 logico en puerto G
 	
 
+	GPIOC->MODER &= ~(0b11<<26);
+	GPIOC->OSPEEDR |= ((1<<27)|(1<<26));
+	GPIOC->PUPDR &= ~(0b11<<26);
+	GPIOC->PUPDR |= (1<<27);
+	
 	SYSCFG->EXTICR[3] &= ~(0b1111<<4); //Clear bits [7:0] (Px13)
 	SYSCFG->EXTICR[3] |= (1<<5); //Select the pin 13 on port C like interrupt [7:0]=0010 (PC13)
 	EXTI->IMR |= (1<<13); //Enable the interrupt on pin 13

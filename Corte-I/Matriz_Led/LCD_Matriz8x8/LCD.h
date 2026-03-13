@@ -11,7 +11,7 @@ void WriteLCD(unsigned char word);
 void DisplayShiftRight(void);
 void DisplayShiftLeft(void);
 void LCD_Init(void);
-void PrintDataLCD(const char* string);
+void PrintDataLCD(const char* string, int a);
 	
 #define MAP_BITS_L(val, p0, b0, p1, b1, p2, b2, p3, b3) do { \
 	(val & 0x01) ? (p0->BSRR = (1 << b0)) : (p0->BSRR = (1 << (b0 + 16))); \

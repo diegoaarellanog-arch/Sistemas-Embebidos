@@ -13,33 +13,54 @@
 uint8_t bufferMensaje[200] = {0};			// El texto completo 
 uint8_t bufferPantalla[24] = {0};     // Lo que se ve impreso
 int longitudMensaje = 0;              // Cuántas columnas ocupa la frase
-int b = 0;
+int b = 2;
 
 extern "C"{
 	void EXTI15_10_IRQHandler(void){
+		Delay(DELAY*3);
 		EXTI->PR |= (1<<13); //Down flag
 		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
 			if (b == 1){
-				prepararMensaje("Aguas y Universidades");
+				b = 2;
+				
+				SettingsLCD(CD);
+				Delay(DELAY * 10);
+				prepararMensaje("G43 SAN MATEO");
+				PrintDataLCD("G43 SAN MATEO",0);
+				b = 2;
+				
+			}
+			else if (b == 2) {
 				b = 0;
+				
+				SettingsLCD(CD);
+				Delay(DELAY * 10);
+				prepararMensaje("Leon XII");
+				PrintDataLCD("Leon XIII",0);
 			}
 			else {
-				prepararMensaje("Marly y Calle 45");
 				b = 1;
+				
+				SettingsLCD(CD);
+				Delay(DELAY * 10);
+				prepararMensaje("Terreros");
+				PrintDataLCD("Terreros",0);
+				
 			}
 		}
 	}
 }
 
+
 int main(){
 	
 	Init(); // GPIOs
   LCD_Init();
-	PrintDataLCD("Aguas y Universidades");
+	PrintDataLCD("G43 SAN MATEO",0);
   DisplayShiftRight();
   DisplayShiftLeft();
 	
-	prepararMensaje("Proximas paradas: Aguas y Universidades");
+	prepararMensaje("G43 SAN MATEO");
 	int miOffset = -24; // Empezamos desde fuera de la pantalla (derecha)
 	
 	while (1) {
@@ -48,7 +69,7 @@ int main(){
 		
 		// 2. Refrescar la pantalla muchas veces para que el ojo lo vea
 		// Entre más veces lo hagas, más lento se moverá el texto
-		for(int velocidad = 0; velocidad < 150; velocidad++) {
+		for(int velocidad = 0; velocidad < 40; velocidad++) {
 			refrescarPantalla(); // La función que te pasé antes
 		}
 

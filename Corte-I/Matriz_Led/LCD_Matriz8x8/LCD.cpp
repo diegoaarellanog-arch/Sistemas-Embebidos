@@ -42,8 +42,8 @@ void WriteLCDdata(unsigned char word){
 	LCDdata(word & 0x0F); //4LSB
 }
 
-void PrintDataLCD(const char* string){
-    SettingsLCD(RAW1);
+void PrintDataLCD(const char* string, int a){
+    SettingsLCD(RAW1 + a);
     for(int i = 0; i < strlen(string); i++) {
         WriteLCDdata(string[i]);
     }
