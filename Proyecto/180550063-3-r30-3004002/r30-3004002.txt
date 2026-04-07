@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"R30-3004002";"";
+"TraceParts.PartVersion";"1.0.1";"";
+"SUPPLIER";"HARWIN";"";
+"contact_finish";"Nickel";"";
+"gender";"Male/Female";"";
+"TraceParts.PartNumber";"90-26052023-043751";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"M3 Male/Female Threaded Hexagonal Brass Spacer, 5mm A/F, 40mm body, 6mm stud, Nickel finish";"";
+"TraceParts.InstanceId";"90-26052023-0437512N3XX9WWY2MK673V115V3T3RA";"";
+"TraceParts.PartTitle";"M3 Male/Female Threaded Hexagonal Brass Spacer, 5mm A/F, 40mm body, 6mm stud, Nickel finish";"";
+"contact_base_material";"Brass";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"packing";"Bulk/Loose";"";

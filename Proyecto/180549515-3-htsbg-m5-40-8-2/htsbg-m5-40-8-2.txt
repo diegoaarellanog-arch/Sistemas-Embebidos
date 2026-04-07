@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-25012011-081366";"";
+"REFERENCE";"HTSBG-M5-40-8-2";"";
+"rs_stock_number";"1057293";"";
+"TraceParts.PartTitle";"Separador roscado, Richco, Hexagonal, Macho/Hembra, 40mm, M5 x M5";"";
+"SUPPLIER_NAME";"RS Components";"";
+"Buy_Now";"https://uk.rs-online.com/web/p/products/1057293?cm_mmc=en-ds-_-mcad-_-traceparts-_-1057293'";"";
+"SUPPLIER";"Richco";"";
+"DESIGN";"Separador roscado, Richco, Hexagonal, Macho/Hembra, 40mm, M5 x M5";"";
+"TraceParts.InstanceId";"10-25012011-0813667O2JYT900TD272MQ3LD4K2YWB";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"es";"";
+"TraceParts.PartVersion";"1.1.8";"";

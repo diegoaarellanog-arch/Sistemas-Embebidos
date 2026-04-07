@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-13092025-003499";"";
+"REFERENCE";"R30-3001502";"";
+"rs_stock_number";"1613579";"";
+"TraceParts.PartTitle";"Male/Female PCB spacer, M3, 15mm length";"";
+"url";"https://uk.rs-online.com/web/p/standoffs/1613579//?cm_mmc=aff-_-uk-_-traceparts-_-1613579";"";
+"SUPPLIER_NAME";"RS Components";"";
+"SUPPLIER";"HARWIN";"";
+"DESIGN";"Male/Female PCB spacer, M3, 15mm length";"";
+"TraceParts.InstanceId";"90-13092025-0034992N3XX9WWY2MK673V115V3T3RA";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.0";"";
